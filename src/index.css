@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f3f6f8;
+  color: #263238;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+code {
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+.Header,
+.Nav,
+.Footer {
+  width: 100%;
+}
+
+.Header {
+  min-height: 64px;
+  padding: 0 max(1.25rem, calc((100% - 1080px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A66C2;
+  border-bottom: 1px solid #07539e;
+}
+
+.Header h1 {
+  margin: 0;
+  color: #f7f6f0;
+  font-size: 1.7rem;
+  letter-spacing: -0.06em;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #084f96;
+  border-bottom: 1px solid #073f78;
+}
+
+.searchForm {
+  width: min(100%, 310px);
+}
+
+.searchForm label {
+  position: absolute;
+  left: -9999px;
+}
+
+.searchForm input,
+.newPostForm input,
+.editPostForm input,
+.newPostForm textarea,
+.editPostForm textarea {
+  width: 100%;
+  border: 1px solid #c6cdd2;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.7rem 0.8rem;
+  color: #263238;
+}
+
+.searchForm input {
+  border-color: #c9d9e8;
+  background: #f4f8fb;
+}
+
+.searchForm input:focus,
+.newPostForm input:focus,
+.editPostForm input:focus,
+.newPostForm textarea:focus,
+.editPostForm textarea:focus {
+  outline: 2px solid #70b5f9;
+  outline-offset: 1px;
+  border-color: #0a66c2;
+}
+
+.Nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Nav li {
+  padding: 0;
+}
+
+.Nav li a {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  border-radius: 5px;
+  color: #f0f3ed;
+  text-decoration: none;
+}
+
+.Nav li:hover a,
+.Nav li:focus-within a {
+  background: #176fbd;
+  color: #fff;
+}
+
+.Footer {
+  margin-top: auto;
+  padding: 1rem;
+  background: #084f96;
+  border-top: 1px solid #073f78;
+  color: #e1e6df;
+  text-align: center;
+}
+
+.Footer h1 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+@media (max-width: 560px) {
+  .Nav {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .searchForm {
+    width: 100%;
+  }
+
+  .Nav ul {
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,177 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home,
+.NewPost,
+.EditPost,
+.PostPage,
+.About,
+.Missing {
+  width: min(100% - 2rem, 700px);
+  margin: 2rem auto;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid #e0e5df;
+  border-radius: 10px;
+  background: #edf3f8;
+}
+
+.Home > p {
+  color: #65737b;
+}
+
+.post {
+  padding: 1.25rem 1.4rem;
+  border: 1px solid #dfe4dc;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(24 49 68 / 5%);
+}
+
+.About {
+  padding: 1.5rem;
+  border: 1px solid #dfe4dc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.About h1 {
+  margin: 0;
+  color: #0a66c2;
+}
+
+.About p {
+  color: #455765;
+  line-height: 1.75;
+}
+
+.PostPage > h1 {
+  color: #0a66c2;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+.post a:hover h2 {
+  color: #0a66c2;
+}
+
+.post h2 {
+  margin: 0 0 0.15rem;
+  color: #263238;
+  font-size: 1.2rem;
+}
+
+.postDate {
+  margin: 0 0 0.85rem;
+  color: #687780;
+  font-size: 0.82rem;
+}
+
+.postBody {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.PostPage > h1,
+.EditPost > h2 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+}
+
+.newPostForm,
+.editPostForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 1.4rem;
+  border: 1px solid #dfe3e6;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.newPostForm label,
+.editPostForm label {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.newPostForm textarea,
+.editPostForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.newPostForm button,
+.editPostForm button,
+.deleteButton,
+.editButton {
+  margin-top: 0.65rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid #0a66c2;
+  border-radius: 20px;
+  background: #0a66c2;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newPostForm button:hover,
+.editPostForm button:hover,
+.deleteButton:hover,
+.editButton:hover {
+  background: #084f96;
+}
+
+.PostPage .postBody {
+  margin: 1rem 0;
+}
+
+.PostPage .deleteButton {
+  border-color: #b23b3b;
+  background: #fff;
+  color: #a83232;
+}
+
+.PostPage .deleteButton:hover {
+  background: #fff1f1;
+}
+
+.PostPage .editButton {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 560px) {
+  .Home,
+  .NewPost,
+  .EditPost,
+  .PostPage,
+  .About,
+  .Missing {
+    width: min(100% - 1.25rem, 700px);
+    margin: 1.25rem auto;
+  }
+
+  .post,
+  .newPostForm,
+  .editPostForm,
+  .About {
+    padding: 1rem;
+  }
+
+  .Home {
+    padding: 0.65rem;
+  }
+}
