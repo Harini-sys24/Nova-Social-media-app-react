@@ -145,13 +145,6 @@ code {
 }
 
 @media (min-width: 700px) {
-  .Header,
-  .Nav,
-  .Footer {
-    padding-left: max(0.8rem, calc((100% - 980px) / 2));
-    padding-right: max(0.8rem, calc((100% - 980px) / 2));
-  }
-
   .Nav {
     align-items: flex-start;
   }
