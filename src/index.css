@@ -10,11 +10,11 @@ body,
 }
 
 body {
-  background: #f3f6f8;
-  color: #263238;
+  background: #fff;
+  color: #202124;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 button,
@@ -38,30 +38,35 @@ code {
 }
 
 .Header {
-  min-height: 64px;
-  padding: 0 max(1.25rem, calc((100% - 1080px) / 2));
+  min-height: 56px;
+  padding: 0 0.65rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #0A66C2;
-  border-bottom: 1px solid #07539e;
+  justify-content: space-between;
+  background: #80d1e8;
+  border: 1px solid #69bfd6;
+  color: #111;
 }
 
 .Header h1 {
   margin: 0;
-  color: #f7f6f0;
-  font-size: 1.7rem;
-  letter-spacing: -0.06em;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.Header svg {
+  color: #111;
 }
 
 .Nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0.75rem 1.25rem;
-  background: #084f96;
-  border-bottom: 1px solid #073f78;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  padding: 0.6rem 0.7rem 0.35rem;
+  background: #333;
+  color: #fff;
 }
 
 .searchForm {
@@ -79,16 +84,15 @@ code {
 .newPostForm textarea,
 .editPostForm textarea {
   width: 100%;
-  border: 1px solid #c6cdd2;
-  border-radius: 6px;
+  border: 1px solid #bfc3c5;
+  border-radius: 0;
   background: #fff;
-  padding: 0.7rem 0.8rem;
-  color: #263238;
+  padding: 0.6rem 0.7rem;
+  color: #202124;
 }
 
 .searchForm input {
-  border-color: #c9d9e8;
-  background: #f4f8fb;
+  min-height: 36px;
 }
 
 .searchForm input:focus,
@@ -96,15 +100,14 @@ code {
 .editPostForm input:focus,
 .newPostForm textarea:focus,
 .editPostForm textarea:focus {
-  outline: 2px solid #70b5f9;
+  outline: 2px solid #69bfd6;
   outline-offset: 1px;
-  border-color: #0a66c2;
 }
 
 .Nav ul {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.15rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -116,46 +119,40 @@ code {
 
 .Nav li a {
   display: block;
-  padding: 0.55rem 0.8rem;
-  border-radius: 5px;
-  color: #f0f3ed;
+  padding: 0.3rem 0.4rem;
+  color: #f5f5f5;
   text-decoration: none;
 }
 
 .Nav li:hover a,
 .Nav li:focus-within a {
-  background: #176fbd;
+  background: #4a4a4a;
   color: #fff;
 }
 
 .Footer {
   margin-top: auto;
-  padding: 1rem;
-  background: #084f96;
-  border-top: 1px solid #073f78;
-  color: #e1e6df;
+  padding: 0.45rem 0.5rem;
+  background: #80d1e8;
+  color: #18323a;
   text-align: center;
 }
 
 .Footer h1 {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
-@media (max-width: 560px) {
+@media (min-width: 700px) {
+  .Header,
+  .Nav,
+  .Footer {
+    padding-left: max(0.8rem, calc((100% - 980px) / 2));
+    padding-right: max(0.8rem, calc((100% - 980px) / 2));
+  }
+
   .Nav {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 0.4rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .searchForm {
-    width: 100%;
-  }
-
-  .Nav ul {
-    justify-content: space-around;
+    align-items: flex-start;
   }
 }

@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 .Home,
@@ -10,42 +11,42 @@
 .PostPage,
 .About,
 .Missing {
-  width: min(100% - 2rem, 700px);
-  margin: 2rem auto;
+  width: min(100%, 980px);
+  margin: 0 auto;
 }
 
 .Home {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-  padding: 1rem;
-  border: 1px solid #e0e5df;
-  border-radius: 10px;
-  background: #edf3f8;
+  gap: 0;
+  flex: 1;
+  padding: 0;
+  background: #fff;
 }
 
 .Home > p {
-  color: #65737b;
+  margin: 1.25rem 0.8rem;
+  color: #555;
 }
 
 .post {
-  padding: 1.25rem 1.4rem;
-  border: 1px solid #dfe4dc;
-  border-radius: 7px;
+  padding: 0.55rem 0.75rem 0.7rem;
+  border: 0;
+  border-bottom: 1px solid #d5d5d5;
+  border-radius: 0;
   background: #fff;
-  box-shadow: 0 1px 2px rgb(24 49 68 / 5%);
+  box-shadow: none;
 }
 
 .About {
-  padding: 1.5rem;
-  border: 1px solid #dfe4dc;
-  border-radius: 8px;
+  padding: 1.25rem;
   background: #fff;
 }
 
-.About h1 {
-  margin: 0;
-  color: #0a66c2;
+.About h1,
+.PostPage > h1 {
+  margin-top: 0;
+  color: #202124;
 }
 
 .About p {
@@ -53,34 +54,39 @@
   line-height: 1.75;
 }
 
-.PostPage > h1 {
-  color: #0a66c2;
-}
-
 .post a {
   text-decoration: none;
 }
 
 .post a:hover h2 {
-  color: #0a66c2;
+  color: #147b98;
 }
 
 .post h2 {
-  margin: 0 0 0.15rem;
-  color: #263238;
-  font-size: 1.2rem;
+  margin: 0 0 0.05rem;
+  color: #202124;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .postDate {
-  margin: 0 0 0.85rem;
-  color: #687780;
-  font-size: 0.82rem;
+  margin: 0 0 0.55rem;
+  color: #555;
+  font-size: 0.68rem;
 }
 
 .postBody {
   margin: 0;
   overflow-wrap: anywhere;
   white-space: pre-wrap;
+}
+
+.PostPage,
+.NewPost,
+.EditPost,
+.Missing {
+  padding: 1.25rem;
 }
 
 .PostPage > h1,
@@ -95,9 +101,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.55rem;
-  padding: 1.4rem;
-  border: 1px solid #dfe3e6;
-  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid #d5d5d5;
   background: #fff;
 }
 
@@ -120,9 +125,9 @@
 .editButton {
   margin-top: 0.65rem;
   padding: 0.55rem 1rem;
-  border: 1px solid #0a66c2;
-  border-radius: 20px;
-  background: #0a66c2;
+  border: 1px solid #1485a0;
+  border-radius: 3px;
+  background: #1485a0;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
@@ -132,7 +137,7 @@
 .editPostForm button:hover,
 .deleteButton:hover,
 .editButton:hover {
-  background: #084f96;
+  background: #09687f;
 }
 
 .PostPage .postBody {
@@ -154,24 +159,10 @@
 }
 
 @media (max-width: 560px) {
-  .Home,
+  .PostPage,
   .NewPost,
   .EditPost,
-  .PostPage,
-  .About,
   .Missing {
-    width: min(100% - 1.25rem, 700px);
-    margin: 1.25rem auto;
-  }
-
-  .post,
-  .newPostForm,
-  .editPostForm,
-  .About {
-    padding: 1rem;
-  }
-
-  .Home {
-    padding: 0.65rem;
+    padding: 1rem 0.75rem;
   }
 }
