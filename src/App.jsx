@@ -13,11 +13,13 @@ import PostLayout from './PostLayout'
 import EditPost from './EditPost'
 import { useNavigate } from 'react-router-dom'
 import api from './api/posts'
+import useWindowSize from './hooks/useWindowSize'
 
 import './App.css'
 import { Link,Routes,Route } from 'react-router-dom'
 function App() {
   const navigate = useNavigate();
+  const windowSize = useWindowSize();
   const [posts, setPosts] = useState([]);
   const [search,setSearch] = useState('')
   const [searchResults,setSearchResults] = useState([])
@@ -110,7 +112,7 @@ function App() {
   }
   return (
     <div className="app">
-      <Header title="Nova" />
+      <Header title="Nova" width={windowSize.width} />
       <Nav 
       search={search}
       setSearch = {setSearch}

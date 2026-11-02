@@ -23,6 +23,18 @@
       "title": "My Fourth Post",
       "datetime": "October 31,20268:08:50 PM",
       "body": "ETH will outperform btc"
+    },
+    {
+      "id": "wuzHSfOvUwU",
+      "title": "Certificate",
+      "datetime": "November 02,20268:17:41 PM",
+      "body": "Certification in DSA"
+    },
+    {
+      "title": "hii",
+      "datetime": "November 02,202610:02:16 PM",
+      "body": "makkale",
+      "id": "TksCTGI4f3I"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
